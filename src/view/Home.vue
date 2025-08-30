@@ -28,10 +28,9 @@ loadHitokoto()
                 {{ hitokotoText }}
             </div>
         </Transition>
-        <!-- <div class="divider"></div> -->
         <div class="social-buttons-div">
             <SocialButton v-for="item in config.socialLinks" :icon="item.icon" :link="item.link"
-                :is-custom-icon="item.customIcon" :key="item.link" />
+                :is-custom-icon="item.customIcon" :key="item.name" />
         </div>
     </div>
 </template>

@@ -24,13 +24,17 @@ const views = [
             </Transition>
         </div>
     </Transition>
-    <div class="bottom-button-group" :key="activeView">
-        <TabButton v-for="(item, index) in config.tabButtons" :icon="item.icon" :title="item.title"
-            @click-event="activeView = index" :class="activeView === index ? 'active' : ''" />
-    </div>
+    <Transition name="bottom-button-transition" appear>
+        <div class="bottom-button-group">
+            <TabButton v-for="(item, index) in config.tabButtons" :icon="item.icon" :title="item.title"
+                @click-event="activeView = index" :class="activeView === index ? 'active' : ''" />
+        </div>
+    </Transition>
+
 </template>
 
 <style scoped lang="scss">
+
 .bottom-button-group {
     position: fixed;
     bottom: 0;

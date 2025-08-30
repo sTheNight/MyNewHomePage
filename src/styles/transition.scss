@@ -1,0 +1,64 @@
+/**
+ * 
+ * @sTheNight(2025/8/30)
+ * 
+ */
+
+// 一言加载动画尚未拆分，待后续优化
+
+// 主页切换加载动画
+.fade-enter-active,
+.fade-leave-active {
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.fade-enter-from {
+    opacity: 0;
+    transform: translateY(-20px);
+}
+
+.fade-enter-to {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.fade-leave-from {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.fade-leave-to {
+    opacity: 0;
+    transform: translateY(20px);
+}
+// 主页初次加载动画
+.loading-enter-active,
+.loading-leave-active {
+    transition: all .5s;
+}
+
+.loading-enter-to {
+    transform: scale(1);
+    filter: blur(0);
+}
+
+.loading-enter-from {
+    transform: scale(1.8);
+    filter: blur(8px);
+}
+// 底部按钮组加载动画
+.bottom-button-transition-enter-active,
+.bottom-button-transition-leave-active {
+    transition: all .5s;
+}
+
+.bottom-button-transition-enter-from,
+.bottom-button-transition-leave-to {
+    transform: translateY(100%);
+    opacity: 0;
+}
+.bottom-button-transition-enter-to,
+.bottom-button-transition-leave-from {
+    transform: translateY(0);
+    opacity: 1;
+}
