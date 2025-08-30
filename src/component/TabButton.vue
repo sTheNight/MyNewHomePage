@@ -28,7 +28,7 @@ defineProps(['icon', 'title'])
     }
 
     &:not(:last-child) {
-        margin-right: 4px;
+        margin-right: 8px;
     }
 }
 </style>
