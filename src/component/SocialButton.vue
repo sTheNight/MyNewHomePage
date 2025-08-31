@@ -1,5 +1,9 @@
 <script lang="ts" setup>
-defineProps(['icon', 'link', 'isCustomIcon'])
+defineProps<{
+    icon: string;
+    link: string;
+    isCustomIcon?: boolean;
+}>()
 </script>
 
 <template>

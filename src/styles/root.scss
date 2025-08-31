@@ -5,6 +5,7 @@ body {
     background-position: center center;
     background-size: cover;
     background-image: url('/background.png');
+    background-attachment: fixed;
 
     color: $global-font-color;
 

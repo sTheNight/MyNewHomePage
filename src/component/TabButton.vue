@@ -1,6 +1,11 @@
 <script setup lang="ts">
-defineEmits(['clickEvent'])
-defineProps(['icon', 'title'])
+defineEmits<{
+    clickEvent: void;
+}>()
+defineProps<{
+    icon: string;
+    title: string;
+}>()
 </script>
 <template>
     <div class="tab-button" @click="$emit('clickEvent')"><i :class="icon"></i>{{ title }}</div>

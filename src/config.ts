@@ -12,4 +12,21 @@ export const config = {
         { name: 'Github', icon: 'fa-brands fa-github', link: 'https://github.com/sTheNight', customIcon: false },
         { name: 'Bilibili', icon: 'fa-brands fa-bilibili', link: 'https://space.bilibili.com/255841070', customIcon: false }
     ],
+    navList:[
+        {
+            name: 'First Section',
+            list: [
+                { name: 'Google', link: 'https://www.google.com' },
+                { name: 'Bing', link: 'https://www.bing.com' },
+                { name: 'DuckDuckGo', link: 'https://duckduckgo.com' }
+            ]
+        },
+        {
+            name: 'Second Section',
+            list: [
+                { name: 'MDN Web Docs', link: 'https://developer.mozilla.org' },
+                { name: 'W3Schools', link: 'https://www.w3schools.com' }
+            ]
+        }
+    ]
 }

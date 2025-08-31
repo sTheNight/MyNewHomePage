@@ -5,7 +5,6 @@ import { fetchHitokoto } from '@/utils/function';
 import { ref } from 'vue';
 
 const hitokotoText = ref('Loading...')
-const enableHitokotoTransition = ref(false)
 
 async function loadHitokoto() {
     hitokotoText.value = await fetchHitokoto()
