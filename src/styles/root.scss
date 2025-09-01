@@ -1,5 +1,12 @@
 @use "@/styles/rule" as *;
 
+@font-face {
+    font-family: XiaolaiMonoSC;
+    src: url("https://cs.kasuie.cc/fonts/XiaolaiMonoSC-Regular.ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+
 body {
     position: relative;
     background-position: center center;
@@ -12,6 +19,8 @@ body {
     box-sizing: border-box;
     margin: 0;
     padding: 0 16px;
+
+    font-family: XiaolaiMonoSC, cursive, emoji;
 }
 
 .blur-overlay {
