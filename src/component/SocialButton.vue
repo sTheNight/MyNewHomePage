@@ -2,6 +2,7 @@
 defineProps<{
     icon: string;
     link: string;
+    tooltip?: string;
     isCustomIcon?: boolean;
 }>()
 </script>
@@ -10,6 +11,7 @@ defineProps<{
     <a class="social-button" :href="link">
         <i v-if="!isCustomIcon" :class="icon"></i>
         <div class="customIcon" v-else v-html="icon"></div>
+        <span v-if="tooltip" class="tooltip">{{ tooltip }}</span>
     </a>
 </template>
 
@@ -40,6 +42,10 @@ defineProps<{
     &:focus,
     &:hover {
         background-color: rgba(255, 255, 255, 0.25);
+
+        .tooltip {
+            opacity: 1;
+        }
     }
 
     &::before {
@@ -56,8 +62,24 @@ defineProps<{
         z-index: -1;
         animation: pulse 1.5s infinite;
     }
+
     &:not(:last-child) {
         margin-right: 24px;
+    }
+
+    .tooltip {
+        position: absolute;
+        top: 120%;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: rgba($color: #000000, $alpha: 0.8);
+        padding: 4px 8px;
+        border-radius: 4px;
+        white-space: nowrap;
+        font-size: 14px;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s;
     }
 }
 

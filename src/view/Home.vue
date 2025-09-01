@@ -29,7 +29,7 @@ loadHitokoto()
         </Transition>
         <div class="social-buttons-div">
             <SocialButton v-for="item in config.socialLinks" :icon="item.icon" :link="item.link"
-                :is-custom-icon="item.customIcon" :key="item.name" />
+                :is-custom-icon="item.customIcon" :key="item.name" :tooltip="item.name" />
         </div>
     </div>
 </template>
