@@ -131,26 +131,3 @@ loadHitokoto()
     flex-wrap: wrap;
 }
 </style>
-
-<style lang="scss">
-.hitokoto-transition-enter-active,
-.hitokoto-transition-leave-active {
-    transition: all 0.3s ease;
-}
-
-.hitokoto-transition-enter-from {
-    opacity: 0;
-    transform: translateX(-10px);
-}
-
-.hitokoto-transition-enter-to,
-.hitokoto-transition-leave-from {
-    opacity: 1;
-    transform: translateX(0);
-}
-
-.hitokoto-transition-leave-to {
-    opacity: 0;
-    transform: translateX(10px);
-}
-</style>
