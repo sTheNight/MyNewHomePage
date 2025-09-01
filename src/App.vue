@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { onMounted, ref } from 'vue';
+import { onMounted, ref, watch } from 'vue';
 import Home from './view/Home.vue';
 import NavPage from './view/NavPage.vue';
 import TabButton from './component/TabButton.vue';
@@ -15,6 +15,18 @@ const views = [
 onMounted(() => {
     document.title = config.siteTitle;
 })
+    
+watch(activeView, (newVal) => {
+    if(newVal < 0 || newVal >= views.length) {
+        activeView.value = 0;
+        return;
+    }
+    if (newVal === 0) {
+        document.title = config.siteTitle;
+    } else {
+        document.title = `${config.tabButtons[newVal].title} - ${config.siteTitle}`;
+    }
+});
 </script>
 
 <template>
@@ -35,7 +47,7 @@ onMounted(() => {
                 @click-event="activeView = index" :class="activeView === index ? 'active' : ''" />
         </div>
     </Transition>
-
+    
 </template>
 
 <style scoped lang="scss">
