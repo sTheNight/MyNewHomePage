@@ -28,7 +28,7 @@ defineProps<{
     box-sizing: border-box;
     border: 1px solid rgba(#fff, .2);
     backdrop-filter: blur(16px);
-    padding: 15px;
+    padding: 16px;
     color: $global-font-color;
     text-decoration: none;
     transition: all .3s;
@@ -45,7 +45,7 @@ defineProps<{
 
 .icon-box {
     flex: 0 0 auto;
-    margin-right: 10px;
+    margin-right: 16px;
 }
 
 .text-icon {
