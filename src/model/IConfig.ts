@@ -11,8 +11,10 @@ export interface ISocialLink {
 }
 
 export interface INavItem {
+    iconLink?: string;
     name: string;
     link: string;
+    description?: string;
 }
 
 export interface INavSection {

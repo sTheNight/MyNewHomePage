@@ -73,6 +73,10 @@ loadHitokoto()
         transition: all .3s;
     }
 
+    &:hover {
+        transform: translateY(-5px);
+    }
+
     &:hover::before,
     &:focus-within::before {
         transform: scale(1.1);
@@ -82,7 +86,6 @@ loadHitokoto()
 
 .name-text {
     font-size: 20px;
-    font-weight: 600;
     margin-top: 24px;
 }
 
@@ -94,6 +97,8 @@ loadHitokoto()
 }
 
 .hitokoto-text {
+    color: rgba(#fff, .7);
+
     padding: 6px;
     margin-top: 12px;
     position: relative;

@@ -31,6 +31,7 @@
     opacity: 0;
     transform: translateY(20px);
 }
+
 // 主页初次加载动画
 .loading-enter-active,
 .loading-leave-active {
@@ -46,6 +47,7 @@
     transform: scale(1.8);
     filter: blur(8px);
 }
+
 // 底部按钮组加载动画
 .bottom-button-transition-enter-active,
 .bottom-button-transition-leave-active {
@@ -57,6 +59,7 @@
     transform: translateY(100%);
     opacity: 0;
 }
+
 .bottom-button-transition-enter-to,
 .bottom-button-transition-leave-from {
     transform: translateY(0);

@@ -7,7 +7,7 @@ export async function fetchHitokoto(): Promise<string> {
         }
         const response = await fetch('https://v1.hitokoto.cn?c=d&c=k')
         const hitokotoObj = await response.json()
-        
+
         return hitokotoObj.hitokoto ?? 'Could not load Hitokoto'
     } catch (e) {
         console.log(e)

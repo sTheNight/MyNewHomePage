@@ -8,7 +8,8 @@ import { config } from '@/config';
 
 <template>
     <div class="nav-content-box">
-        <NavSection v-for="section in config.navSections" :key="section.name" :name="section.name" :navItems="section.navItems" />
+        <NavSection v-for="section in config.navSections" :key="section.name" :name="section.name"
+            :navItems="section.navItems" />
     </div>
 </template>
 

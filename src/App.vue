@@ -12,7 +12,7 @@ const views = [
     NavPage
 ]
 
-onMounted(()=>{
+onMounted(() => {
     document.title = config.siteTitle;
 })
 </script>
@@ -38,7 +38,6 @@ onMounted(()=>{
 </template>
 
 <style scoped lang="scss">
-
 .bottom-button-group {
     position: fixed;
     bottom: 0;
