@@ -5,8 +5,8 @@ import NavPage from './view/NavPage.vue';
 import TabButton from './component/TabButton.vue';
 import { config } from './config';
 
+// 注册视图组件
 const activeView = ref(0)
-
 const views = [
     Home,
     NavPage
