@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref } from 'vue';
+import { onMounted, ref } from 'vue';
 import Home from './view/Home.vue';
 import NavPage from './view/NavPage.vue';
 import TabButton from './component/TabButton.vue';
@@ -11,6 +11,10 @@ const views = [
     Home,
     NavPage
 ]
+
+onMounted(()=>{
+    document.title = config.siteTitle;
+})
 </script>
 
 <template>
