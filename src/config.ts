@@ -1,4 +1,7 @@
-export const config = {
+import type { IConfig } from './model/IConfig'
+
+export const config : IConfig = {
+    siteTitle: 'Zako~',
     avatar: 'https://avatars.githubusercontent.com/u/85998341?v=4',
     hitokoto: '#HitokotoEnable#',
     author: '重铬酸钠',
@@ -12,20 +15,21 @@ export const config = {
         { name: 'Github', icon: 'fa-brands fa-github', link: 'https://github.com/sTheNight', customIcon: false },
         { name: 'Bilibili', icon: 'fa-brands fa-bilibili', link: 'https://space.bilibili.com/255841070', customIcon: false }
     ],
-    navList:[
+    navSections:[
         {
-            name: 'First Section',
-            list: [
-                { name: 'Google', link: 'https://www.google.com' },
-                { name: 'Bing', link: 'https://www.bing.com' },
-                { name: 'DuckDuckGo', link: 'https://duckduckgo.com' }
+            name: '个人站点',
+            navItems: [
+                { name: '博客', link: 'https://blog.izako.cc/' },
+                { name: 'Alist', link: 'https://alist.izako.cc/' },
+                { name: '主页', link: 'https://izako.cc/' }
             ]
         },
         {
-            name: 'Second Section',
-            list: [
-                { name: 'MDN Web Docs', link: 'https://developer.mozilla.org' },
-                { name: 'W3Schools', link: 'https://www.w3schools.com' }
+            name: '个人项目',
+            navItems: [
+                { name: '个人主页', link: 'https://github.com/sTheNight/MyNewHomePage' },
+                { name: '航天模拟器汉化包', link: 'https://github.com/sTheNight/Spaceflight-Simulator-CNlang/' },
+                { name: 'SFS 安装器', link: 'https://installer.sfs.izako.cc/' }
             ]
         }
     ]
