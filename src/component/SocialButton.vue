@@ -19,10 +19,11 @@ defineProps<{
 .social-button {
     width: 48px;
     height: 48px;
-    margin: 8px;
+
     border-radius: 50%;
     outline: 0;
     box-sizing: border-box;
+    position: relative;
 
     color: $global-font-color;
 
@@ -40,6 +41,24 @@ defineProps<{
     &:hover {
         background-color: rgba(255, 255, 255, 0.25);
     }
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+        border: 1px solid rgba(255, 255, 255, 0.4);
+        opacity: 0;
+        z-index: -1;
+        animation: pulse 1.5s infinite;
+    }
+    &:not(:last-child) {
+        margin-right: 24px;
+    }
 }
 
 .customIcon {
@@ -48,5 +67,17 @@ defineProps<{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+@keyframes pulse {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0.6;
+    }
+
+    100% {
+        transform: translate(-50%, -50%) scale(1.4);
+        opacity: 0;
+    }
 }
 </style>

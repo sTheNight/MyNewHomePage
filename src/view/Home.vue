@@ -122,6 +122,14 @@ loadHitokoto()
         backdrop-filter: blur(8px);
     }
 }
+.social-buttons-div {
+    margin-top: 16px;
+    max-width: min(100%, calc(100vw - 64px));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
 </style>
 
 <style lang="scss">

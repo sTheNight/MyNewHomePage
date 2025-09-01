@@ -28,6 +28,7 @@ onMounted(() => {
             </Transition>
         </div>
     </Transition>
+
     <Transition name="bottom-button-transition" appear>
         <div class="bottom-button-group">
             <TabButton v-for="(item, index) in config.tabButtons" :icon="item.icon" :title="item.title"

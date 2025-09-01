@@ -24,7 +24,7 @@ defineProps<{
 @use "@/styles/rule" as *;
 
 .nav-item-button {
-    min-width: calc(50% - 40px);
+    min-width: calc(50% - 20px);
     box-sizing: border-box;
     border: 1px solid rgba(#fff, .2);
     backdrop-filter: blur(16px);
