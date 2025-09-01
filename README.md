@@ -7,6 +7,10 @@ pnpm i
 pnpm build
 ```
 
- ## 预览
+## Note
+
+此项目当前尚有一些~~(很多)~~问题，请谨慎使用
+
+ ## Preview
 
  [Click Me](https://izako.cc/)
