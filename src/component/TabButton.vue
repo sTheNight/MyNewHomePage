@@ -8,7 +8,7 @@ defineProps<{
 }>()
 </script>
 <template>
-    <div class="tab-button" @click="$emit('clickEvent')"><i :class="icon"></i>{{ title }}</div>
+    <div tabindex="0" class="tab-button" @click="$emit('clickEvent')"><i :class="icon"></i>{{ title }}</div>
 </template>
 
 <style scoped lang="scss">
@@ -22,15 +22,18 @@ defineProps<{
     display: flex;
     justify-content: center;
     align-items: center;
+    outline: none;
 
     i.fa-solid {
         margin-right: 4px;
     }
 
     &:hover,
+    &:focus,
     &.active {
-        background-color: rgba($color: #ffffff, $alpha: 0.15);
+        background-color: rgba($color: #ffffff, $alpha: 0.2);
     }
+
 
     &:not(:last-child) {
         margin-right: 8px;

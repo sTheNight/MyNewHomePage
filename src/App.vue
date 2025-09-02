@@ -27,6 +27,11 @@ watch(activeView, (newVal) => {
         document.title = `${config.tabButtons[newVal].title} - ${config.siteTitle}`;
     }
 });
+
+function handleWheel(e: WheelEvent) {
+    const target = e.currentTarget as HTMLElement;
+    target.scrollLeft += e.deltaY;
+}
 </script>
 
 <template>
@@ -42,7 +47,7 @@ watch(activeView, (newVal) => {
     </Transition>
 
     <Transition name="bottom-button-transition" appear>
-        <div class="bottom-button-group">
+        <div class="bottom-button-group" @wheel.prevent="handleWheel">
             <TabButton v-for="(item, index) in config.tabButtons" :icon="item.icon" :title="item.title"
                 @click-event="activeView = index" :class="activeView === index ? 'active' : ''" />
         </div>
