@@ -8,7 +8,8 @@ defineProps<{
 }>()
 </script>
 <template>
-    <div tabindex="0" class="tab-button" @click="$emit('clickEvent')"><i :class="icon"></i>{{ title }}</div>
+    <div tabindex="0" class="tab-button" @click="$emit('clickEvent')" @keyup.enter="$emit('clickEvent')"><i
+            :class="icon"></i>{{ title }}</div>
 </template>
 
 <style scoped lang="scss">
